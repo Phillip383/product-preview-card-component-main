@@ -1,0 +1,30 @@
+//COLORS
+$Green-500: hsl(158, 36%, 37%);
+$Green-700: hsl(158, 42%, 18%);
+
+$Black: hsl(212, 21%, 14%);
+$Grey: hsl(228, 12%, 48%);
+$Cream: hsl(30, 38%, 92%);
+$White: hsl(0, 0%, 100%);
+
+@mixin montserrat($weight: 500, $style: normal) {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: $normal;
+}
+
+@mixin fraunces($weight: 700, $style: normal) {
+  font-family: "Fraunces", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: $normal;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
