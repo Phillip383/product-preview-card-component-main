@@ -7,24 +7,80 @@ $Grey: hsl(228, 12%, 48%);
 $Cream: hsl(30, 38%, 92%);
 $White: hsl(0, 0%, 100%);
 
+//BREAKPOINTS
+$MIN_WIDTH: 25em;
+$MAX_WIDTH: 102.9em;
+
+//MIXINS
 @mixin montserrat($weight: 500, $style: normal) {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: $weight;
-  font-style: $normal;
+  font-style: $style;
 }
 
 @mixin fraunces($weight: 700, $style: normal) {
   font-family: "Fraunces", sans-serif;
   font-optical-sizing: auto;
   font-weight: $weight;
-  font-style: $normal;
+  font-style: $style;
 }
 
+@mixin flex($dir: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin background($padding, $margin, $color: $Cream) {
+  background-color: $color;
+  padding: $padding;
+  margin: $margin;
+}
+
+//STYLING
+
+:root {
+  @include montserrat();
+  font-size: 14px;
+}
+
+h2 {
+  @include fraunces();
+}
+
+body {
+  @include flex();
+  @include background(0em, "0 auto");
+  width: 100%;
+  min-height: 100%;
+}
+
+article {
+  @include flex();
+  @include background(0, 0, $White);
+  width: clamp($MIN_WIDTH, 20%, $MAX_WIDTH);
+
+  border-radius: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+//FOOTER
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+//QUERIES
+
+//DESKTOP
+@media (min-width: 800) {
 }
