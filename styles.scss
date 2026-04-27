@@ -44,11 +44,13 @@ $MAX_WIDTH: 102.9em;
 :root {
   @include montserrat();
   font-size: 14px;
+  color: $Grey;
 }
 
-h2 {
+h1 {
   @include fraunces();
   color: $Black;
+  line-height: 1em;
 }
 
 body {
@@ -61,6 +63,7 @@ body {
 article {
   @include flex();
   @include background(0, 0, $White);
+  margin: 2em;
   width: clamp($MIN_WIDTH, 20%, $MAX_WIDTH);
 
   border-radius: 10px;
@@ -76,9 +79,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  padding: 0.3em;
-  margin: 2em;
+  width: 100%;
   background-color: $Green-500;
   color: $White;
   border-radius: 10px;
@@ -90,6 +91,33 @@ img {
     padding: 0.8em;
     vertical-align: middle;
   }
+}
+
+#product-info {
+  margin: 2em;
+}
+
+#product-type {
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+#product-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#discount {
+  color: $Green-500;
+  font-size: 2rem;
+  @include fraunces(700);
+}
+
+#original {
+  color: $Grey;
+  text-decoration-line: line-through;
 }
 
 //FOOTER
@@ -104,5 +132,8 @@ img {
 //QUERIES
 
 //DESKTOP
-@media (min-width: 800) {
+@media screen and (min-width: 800px) {
+  article {
+    flex-direction: flex-start;
+  }
 }

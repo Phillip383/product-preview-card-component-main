@@ -4,14 +4,16 @@
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
+  color: hsl(228, 12%, 48%);
 }
 
-h2 {
+h1 {
   font-family: "Fraunces", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   color: hsl(212, 21%, 14%);
+  line-height: 1em;
 }
 
 body {
@@ -34,6 +36,7 @@ article {
   background-color: hsl(0, 0%, 100%);
   padding: 0;
   margin: 0;
+  margin: 2em;
   width: clamp(25em, 20%, 102.9em);
   border-radius: 10px;
 }
@@ -47,9 +50,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  padding: 0.3em;
-  margin: 2em;
+  width: 100%;
   background-color: hsl(158, 36%, 37%);
   color: hsl(0, 0%, 100%);
   border-radius: 10px;
@@ -63,6 +64,36 @@ img {
   vertical-align: middle;
 }
 
+#product-info {
+  margin: 2em;
+}
+
+#product-type {
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+#product-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#discount {
+  color: hsl(158, 36%, 37%);
+  font-size: 2rem;
+  font-family: "Fraunces", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#original {
+  color: hsl(228, 12%, 48%);
+  text-decoration-line: line-through;
+}
+
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
@@ -70,6 +101,12 @@ img {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 800px) {
+  article {
+    flex-direction: flex-start;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
