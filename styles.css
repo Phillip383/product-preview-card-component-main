@@ -51,6 +51,7 @@ img {
   justify-content: center;
   width: 100%;
   background-color: hsl(158, 36%, 37%);
+  border: none;
   color: hsl(0, 0%, 100%);
   border-radius: 10px;
   font-weight: 700;
