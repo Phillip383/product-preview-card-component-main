@@ -62,7 +62,6 @@ body {
 
 article {
   @include flex();
-  @include background(0, 0, $White);
   margin: 2em;
   width: clamp($MIN_WIDTH, 20%, $MAX_WIDTH);
 
@@ -94,7 +93,13 @@ img {
 }
 
 #product-info {
-  margin: 2em;
+  @include background(0, 0, $White);
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 2em;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #product-type {
@@ -134,6 +139,9 @@ img {
 //DESKTOP
 @media screen and (min-width: 800px) {
   article {
-    flex-direction: flex-start;
+    flex-direction: row;
+    img {
+      src: "./images/image-product-desktop.jpg";
+    }
   }
 }
