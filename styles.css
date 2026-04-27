@@ -34,12 +34,14 @@ article {
   justify-content: center;
   align-items: center;
   margin: 2em;
-  width: clamp(25em, 20%, 102.9em);
-  border-radius: 10px;
+  width: clamp(250px, 50%, 375px);
 }
 
 img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -67,7 +69,7 @@ img {
   margin: 0;
   background-size: cover;
   box-sizing: border-box;
-  padding: 2em;
+  padding: 2.2em;
   width: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -111,9 +113,17 @@ img {
 @media screen and (min-width: 800px) {
   article {
     flex-direction: row;
+    flex: 1;
+    align-items: stretch;
+    width: clamp(600px, 20%, 800px);
+    max-height: 400px;
   }
-  article img {
-    src: "./images/image-product-desktop.jpg";
+  img {
+    border-radius: 10px 0px 0px 10px;
+  }
+  #product-info {
+    border-radius: 0px 10px 10px 0px;
+    padding: 2em 2em 2em 3em;
   }
 }
 
