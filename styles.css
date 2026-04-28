@@ -117,7 +117,7 @@ img {
     flex: 1;
     align-items: stretch;
     width: clamp(600px, 20%, 800px);
-    max-height: 400px;
+    max-height: 425px;
   }
   img {
     border-radius: 10px 0px 0px 10px;
