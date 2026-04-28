@@ -33,7 +33,6 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2em;
   width: clamp(250px, 50%, 375px);
 }
 
@@ -117,7 +116,7 @@ img {
     flex: 1;
     align-items: stretch;
     width: clamp(600px, 20%, 800px);
-    max-height: 425px;
+    max-height: 450px;
   }
   img {
     border-radius: 10px 0px 0px 10px;
